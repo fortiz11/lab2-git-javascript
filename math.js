@@ -1,35 +1,86 @@
-function add (a,b){
+/**
+ * Math utilities for learning purpose 
+ * @file 'math.js'
+ * @author 'Francis Ortiz'
+ */
+
+/**
+ * add two numbers
+ * @parm {number} a - First number 
+ * @Parm {number} b - Second number
+ * @Return {number} Sum of a and b
+ */
+
+
+
+
+ export function add (a,b){
     return a+b;
 }
-
-function subtract (a,b){
+/**
+ * Subtract two numbers 
+ * @parm {number} a -First number
+ * @parm {number} b - Second number 
+ * @returns {numbers} Difference of a and b
+ */
+export function subtract (a,b){
     return a-b;
 }
 
-function multiply(a,b){
+/**
+ * Multiply two numbers 
+ * @parm {number} a - First number 
+ * @parm {number} b - Second number 
+ * @returns {number} Difference of a and b 
+ */
+
+export function multiply(a,b){
     return a*b;
 }
+/**
+ * Divide two numbers 
+ * @param {number} a - Dividend  
+ * @param {number} b - Divisor  
+ * @returns {number} Quotient 
+ * @throws {Error} If b is zero
+ */
 
-function divide (a,b){
+export function divide (a,b){
 if (b===0){
     throw new Error ("cannot divide by zero")
 }
 return a/b;
 }
-
-function power(base, exponent){
+/**
+ * calculate power 
+ * @param {number} - Base 
+ * @param {number} - Exponent 
+ * @returns {number} Base raised to exponent 
+ */
+export function power(base, exponent){
     return Math.pow(base, exponent);
 }
+/**
+ * Calculate square root 
+ * @param {number} n - Number to find sqaure root of
+ * @returns {number} Square root
+ * @throws {Error} If n is negative 
+ */
 
-function sqrt(n){
+export function sqrt(n){
     if (n<0){
         throw new Error('Cannot calculate square root of a negative number');
     
     }
     return Math.sqrt(n);
 }
-
-function factorial (n){
+/**
+ * Calculate factorial 
+ * @param {number} n - Number to calculate factorial of  
+ * @returns {number} Factorial of n 
+ * @throws {Error} If n is negative 
+ */
+export function factorial (n){
     if (n<0){
         throw new Error('Factorial not defined for negative numbers');
 
@@ -44,12 +95,5 @@ function factorial (n){
 
 
 
-console.log('Testing math functions:');
-console.log('add(5,3)=' , add(5,3));
-console.log('subtract(10,4=', subtract (10,4));
-console.log('multiply(3,7)=', multiply (3,7));
-console.log('divide(20,4)=', divide(20,4));
-console.log('power(2,8)=', power (2,8));
-console.log('sqrt(16=', sqrt(16));
-console.log('factorial(5)=', factorial(5));
+
 
