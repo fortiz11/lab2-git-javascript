@@ -19,6 +19,13 @@ describe('Math Module', () => {
         it('should throw error when dividing by zero', () => {
             assert.throws(() => math.divide(10, 0), /cannot divide by zero/);
         });
+        it('should throw error when adding strings', () => {
+            assert.throws(() => math.add("two", "five"), /Add numbers only/);
+        });
+        it('Should subtract two numbers correctly', () =>{
+            assert.equal(math.subtract(10,5), 5)
+        })
+        
     });
 
     describe('Advanced operations', () => {
@@ -41,6 +48,9 @@ describe('String Module', () => {
         it('should throw error for non-string input to reverse', () => {
             assert.throws(() => strings.reverse(123), /Input must be a string/);
         });
+        it('should capitalize the first letter of the word', () => {
+            assert.equal(strings.capitalize('javascript'), 'Javascript');
+        });
     });
 });
 
@@ -53,6 +63,9 @@ describe('Array Module', () => {
 
         it('should throw error for empty array average', () => {
             assert.throws(() => arrays.average([]), /Input must be a non-empty array/);
+        });
+        it('should compute the average of the numbers', () => {
+            assert.equal(arrays.average([2, 4, 6]), 4);
         });
     });
 });
