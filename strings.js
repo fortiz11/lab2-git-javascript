@@ -11,7 +11,11 @@
  */
 
 export function reverse(str){
-    return "stubbed";
+    if(typeof str !== 'string'){
+        throw new Error ("Input must be a string");
+    }
+    return str.split('').reverse().join('');
+
 }
 
 /**
@@ -21,7 +25,11 @@ export function reverse(str){
  */
 
 export function capitalize (str){
-    return "stubbed";
+    if (typeof str !== 'string'){
+        throw new Error ('Input must be a string')
+    }
+    if (str.length ===0)return'';
+    return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
 
 /**
@@ -31,7 +39,17 @@ export function capitalize (str){
  */
 
 export function countVowels (str){
-    return "stubbed";
+     if(typeof str !=='string'){
+        throw new Error ('Input must be a string');
+     }
+     const vowels = 'aeiouAEIOU';
+     let count = 0;
+     for (let char of str){
+        if (vowels.includes(char)){
+            count++;
+        }
+     }
+     return count;
 }
 
 /**
@@ -41,5 +59,10 @@ export function countVowels (str){
  */
 
 export function isPalindrome (str){
-    return "stubbed";
+    if (typeof str !== 'string') {
+        throw new Error('Input must be a string');
+    }
+    const cleaned = str.replace(/\s/g, '').toLowerCase();
+    const reversed = cleaned.split('').reverse().join('');
+    return cleaned === reversed;
 }
