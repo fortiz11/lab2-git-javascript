@@ -6,21 +6,21 @@
 
 /**
  * add two numbers
- * @parm {number} a - First number 
- * @Parm {number} b - Second number
+ * @param {number} a - First number 
+ * @param {number} b - Second number
  * @Return {number} Sum of a and b
  */
 
 
 
 
- export function add (a,b){
+export function add (a,b){
     return a+b;
 }
 /**
  * Subtract two numbers 
- * @parm {number} a -First number
- * @parm {number} b - Second number 
+ * @param {number} a -First number
+ * @param {number} b - Second number 
  * @returns {numbers} Difference of a and b
  */
 export function subtract (a,b){
@@ -29,8 +29,8 @@ export function subtract (a,b){
 
 /**
  * Multiply two numbers 
- * @parm {number} a - First number 
- * @parm {number} b - Second number 
+ * @param {number} a - First number 
+ * @param {number} b - Second number 
  * @returns {number} Difference of a and b 
  */
 
